@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습예제1</title>
+    filter, includes, from을 사용해서 문자열 'e'가 포함된 노드로 구성된 배열을 만들어서 반환하기   
+</head>
+<ul>
+    <li>apple</li>
+    <li>orange</li>
+    <li>banana</li>
+    <li>strawberry</li>
+</ul>
+<body>
+    <script>
+        let tempArray = new Array();
+        let data = document.querySelectorAll('li');
+        for(let i = 0; i < data.length; i++) {
+            var result = tempArray.push(data[i].innerHTML);
+        }
+
+        function test(a) {
+            for(let i = 0; i < a.length; i++) {
+                var item = Array.from(tempArray);
+            }        
+            const market = item.filter(word => word.includes('e'));
+            console.log(market);     
+        };
+        test(tempArray)
+
+    </script>
+</body>
+</html>
