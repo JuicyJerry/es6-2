@@ -15,6 +15,7 @@
 </ul>
 <body>
     <script>
+      //나의 코드
         let tempArray = new Array();
         let data = document.querySelectorAll('li');
         for(let i = 0; i < data.length; i++) {
@@ -29,6 +30,17 @@
             console.log(market);     
         };
         test(tempArray)
+
+        //강사 코드
+        function print() {
+          let list = document.querySelectorAll("li");
+          let listArray = Array.from(list);
+          let eArray = listArray.filter(function(v) {
+            return v.innerText.includes("e");
+          });
+          return eArray;
+        }
+        console.log(print());
 
     </script>
 </body>
